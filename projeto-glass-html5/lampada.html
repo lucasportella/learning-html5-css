@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acender Lâmpada</title>
+</head>
+<body>
+    <h1>Acendendo a Lâmpada</h1>
+    <img id="lampada-apagada" src="_imagens/lampada-apagada.jpg" alt="imagem de lâmpada apagada" onmousemove="acenderLampada()" onmouseout="apagarLampada()" onclick="quebrarLampada()">
+    <script>
+        var verificadorLampadaQuebrada = false
+        if (verificadorLampadaQuebrada === true) {window.document.getElementById("lampada-apagada").src = "_imagens/lampada-quebrada.jpg"
+          } else {
+        function acenderLampada() {
+            window.document.getElementById("lampada-apagada").src = "_imagens/lampada-acesa.jpg";
+        }
+        function apagarLampada() {
+            window.document.getElementById("lampada-apagada").src = "_imagens/lampada-apagada.jpg"
+        }
+        function quebrarLampada() {
+            window.document.getElementById("lampada-apagada").src = "_imagens/lampada-quebrada.jpg" 
+            verificadorLampadaQuebrada = true} }
+        
+    </script>
+</body>
+</html>
