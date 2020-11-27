@@ -7,21 +7,22 @@
 </head>
 <body>
     <h1>Acendendo a Lâmpada</h1>
-    <img id="lampada-apagada" src="_imagens/lampada-apagada.jpg" alt="imagem de lâmpada apagada" onmousemove="acenderLampada()" onmouseout="apagarLampada()" onclick="quebrarLampada()">
+    <img id="lampada" src="_imagens/lampada-apagada.jpg" alt="imagem de lâmpada apagada" onmousemove="acenderLampada()" onmouseout="apagarLampada()" onclick="quebrarLampada()">
     <script>
         var verificadorLampadaQuebrada = false
-        if (verificadorLampadaQuebrada === true) {window.document.getElementById("lampada-apagada").src = "_imagens/lampada-quebrada.jpg"
-          } else {
         function acenderLampada() {
-            window.document.getElementById("lampada-apagada").src = "_imagens/lampada-acesa.jpg";
+            arquivo = "_imagens/lampada-acesa.jpg";
         }
         function apagarLampada() {
-            window.document.getElementById("lampada-apagada").src = "_imagens/lampada-apagada.jpg"
+            arquivo = "_imagens/lampada-apagada.jpg"
         }
         function quebrarLampada() {
-            window.document.getElementById("lampada-apagada").src = "_imagens/lampada-quebrada.jpg" 
-            verificadorLampadaQuebrada = true} }
+           arquivo = "_imagens/lampada-quebrada.jpg" }
         
+           if (verificadorLampadaQuebrada === false) {
+            document.getElementById("lampada").src = arquivo;
+        }
+
     </script>
 </body>
 </html>
