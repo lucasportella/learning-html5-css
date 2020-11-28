@@ -7,21 +7,28 @@
 </head>
 <body>
     <h1>Acendendo a Lâmpada</h1>
-    <img id="lampada" src="_imagens/lampada-apagada.jpg" alt="imagem de lâmpada apagada" onmousemove="acenderLampada()" onmouseout="apagarLampada()" onclick="quebrarLampada()">
+    <img id="lampada" src="_imagens/lampada-apagada.jpg" alt="imagem de lâmpada apagada" onmousemove="funcaoLampada(1)" onmouseout="funcaoLampada(2)" onclick="funcaoLampada(3)">
     <script>
         var verificadorLampadaQuebrada = false
-        function acenderLampada() {
+        function funcaoLampada(tipo) {
+            if (tipo === 1) {
             arquivo = "_imagens/lampada-acesa.jpg";
-        }
-        function apagarLampada() {
-            arquivo = "_imagens/lampada-apagada.jpg"
-        }
-        function quebrarLampada() {
-           arquivo = "_imagens/lampada-quebrada.jpg" }
-        
-           if (verificadorLampadaQuebrada === false) {
-            document.getElementById("lampada").src = arquivo;
-        }
+            }
+            if (tipo === 2) {
+            arquivo = "_imagens/lampada-apagada.jpg";
+            }
+            if (tipo === 3) {
+            arquivo = "_imagens/lampada-quebrada.jpg";
+            } 
+            if (verificadorLampadaQuebrada === false) {
+                window.document.getElementById("lampada").src = arquivo;
+            if (tipo === 3) {
+            verificadorLampadaQuebrada = true;
+            }  
+        } 
+    }
+            
+
 
     </script>
 </body>
